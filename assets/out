@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+# frozen_string_literal: true
+
+require_relative 'functions'
+require 'json'
+
+#Read and parse source configs
+sSource = $stdin.read
+source = JSON.parse(sSource)
+
+check_source(source, "source")
+check_source(source, "version")
+
+generate_out_output(source)

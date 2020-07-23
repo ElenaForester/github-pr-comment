@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+# frozen_string_literal: true
+
+require_relative 'functions'
+require 'json'
+
+#Read and parse source configs
+sSource = $stdin.read
+source = JSON.parse(sSource)
+
+check_source(source, "source")
+check_required_params(source["source"])
+validate_repo_name(source["source"]["repo"])
+validate_comment_regex(source["source"]["comment_regex"])
+
+generate_check_output(source["source"]["repo"], source["source"]["github_token"], source["source"]["comment_regex"], source["version"])
+
+puts $versions.to_json
