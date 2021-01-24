@@ -50,9 +50,10 @@ def get_pr_comments(repo, github_token, since)
   client = Octokit::Client.new :access_token => github_token
 
   options = {
-      :sort => 'asc',
-      :direction => 'asc',
-      :since => since
+      :sort => 'desc',
+      :direction => 'desc',
+      :since => since,
+      :per_page => 100
   }
 
   begin
