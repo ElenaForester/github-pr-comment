@@ -30,7 +30,7 @@ resource_types:
     type: docker-image
     source:
       repository: elenaforester/github-pr-comment
-      tag: latest
+      tag: 0.0.1
 
 resources:
 - name: pr-comment
