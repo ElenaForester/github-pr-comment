@@ -20,7 +20,7 @@ Places the following files in the destination:
 - `issue_url`: Contains the issue url where comment was added
 
 ### `out`
-Resource doesn't support 'out' action
+Resource doesn't support `out` action
 
 ## Example
 Resource configuration
